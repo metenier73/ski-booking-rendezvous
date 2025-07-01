@@ -83,11 +83,11 @@ const Contact = () => {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-blue-600">10+</div>
+                <div className="text-3xl font-bold text-blue-600">20+</div>
                 <div className="text-gray-700">Années d'expérience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-600">200+</div>
+                <div className="text-3xl font-bold text-green-600">7 000+</div>
                 <div className="text-gray-700">Élèves formés</div>
               </div>
               <div>
