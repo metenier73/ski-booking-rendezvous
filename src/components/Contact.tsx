@@ -77,8 +77,8 @@ const Contact = () => {
             </h3>
             
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Que vous soyez débutant ou skieur confirmé, je vous accompagne dans votre progression 
-              avec passion et professionnalisme. Plus de 10 ans d'expérience à votre service !
+              Que vous soyez débutant ou confirmé, je vous accompagne dans votre progression 
+              avec passion et professionnalisme. Plus de 20 ans d'expérience à votre service !
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
