@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-blue-600">
                 <Snowflake className="h-8 w-8" />
-                <span className="text-lg font-semibold">Monitrice Française Diplômée</span>
+                <span className="text-lg font-semibold">Monitrice ESF Diplômée</span>
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">

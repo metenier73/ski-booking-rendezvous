@@ -7,21 +7,21 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      content: "07 68 10 61 07",
+      content: "06 12 34 56 78",
       description: "Disponible 7j/7 pendant la saison",
       color: "text-blue-600"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "meteniermyriam@yahoo.fr",
+      content: "contact@skipro.fr",
       description: "Réponse sous 24h garantie",
       color: "text-green-600"
     },
     {
       icon: MapPin,
       title: "Lieu",
-      content: "Val d'Isère & Tignes",
+      content: "Les Deux Alpes",
       description: "Station de ski des Alpes",
       color: "text-purple-600"
     },
