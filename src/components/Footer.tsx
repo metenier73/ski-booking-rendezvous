@@ -1,0 +1,58 @@
+
+import { Snowflake, Heart } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <div className="flex items-center space-x-2 mb-4">
+              <Snowflake className="h-8 w-8 text-blue-400" />
+              <div>
+                <h3 className="text-xl font-bold">SkiPro</h3>
+                <p className="text-sm text-gray-400">Cours de ski personnalisés</p>
+              </div>
+            </div>
+            <p className="text-gray-400 mb-4">
+              Monitrice de ski diplômée ESF, passionnée par l'enseignement et la montagne. 
+              Plus de 10 ans d'expérience dans l'accompagnement des skieurs de tous niveaux.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>Cours particuliers</li>
+              <li>Cours collectifs</li>
+              <li>Cours enfants</li>
+              <li>Perfectionnement</li>
+              <li>Hors-piste</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-400">
+              <p>📞 06 12 34 56 78</p>
+              <p>✉️ contact@skipro.fr</p>
+              <p>🏔️ Les Deux Alpes</p>
+              <p>🕒 9h - 17h (saison d'hiver)</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400 flex items-center justify-center">
+            Fait avec <Heart className="h-4 w-4 text-red-500 mx-2" /> pour la montagne
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            © 2024 SkiPro - Monitrice de ski diplômée ESF
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
