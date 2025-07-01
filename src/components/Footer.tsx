@@ -15,7 +15,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-400 mb-4">
-              Monitrice de ski diplômée ESF, passionnée par l'enseignement et la montagne. 
+              Monitrice de ski diplômée, 15 ans d'ESF, passionnée par l'enseignement et la montagne. 
               Plus de 20 ans d'expérience dans l'accompagnement des skieurs de tous niveaux.
             </p>
           </div>
