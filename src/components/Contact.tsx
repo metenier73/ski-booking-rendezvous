@@ -1,113 +1,101 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, Mountain } from "lucide-react";
 
 const Contact = () => {
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Téléphone",
+      content: "06 12 34 56 78",
+      description: "Disponible 7j/7 pendant la saison",
+      color: "text-blue-600"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      content: "contact@skipro.fr",
+      description: "Réponse sous 24h garantie",
+      color: "text-green-600"
+    },
+    {
+      icon: MapPin,
+      title: "Lieu",
+      content: "Les Deux Alpes",
+      description: "Station de ski des Alpes",
+      color: "text-purple-600"
+    },
+    {
+      icon: Clock,
+      title: "Horaires",
+      content: "9h - 17h",
+      description: "Saison d'hiver : Décembre à Avril",
+      color: "text-orange-600"
+    }
+  ];
+
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Contact & Informations
+            Me Contacter
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            N'hésitez pas à me contacter pour toute question ou information complémentaire
+            N'hésitez pas à me contacter pour toute question ou pour réserver vos cours de ski. 
+            Je suis à votre disposition pour vous accompagner dans votre progression.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-6 w-6 text-blue-600" />
-              </div>
-              <CardTitle className="text-lg">Téléphone</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">Réservations & Renseignements</p>
-              <a href="tel:+33612345678" className="text-blue-600 font-semibold hover:underline">
-                06 12 34 56 78
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-6 w-6 text-green-600" />
-              </div>
-              <CardTitle className="text-lg">Email</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">Réponse sous 24h</p>
-              <a href="mailto:contact@skipro.fr" className="text-green-600 font-semibold hover:underline">
-                contact@skipro.fr
-              </a>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mountain className="h-6 w-6 text-purple-600" />
-              </div>
-              <CardTitle className="text-lg">Station</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">Domaine skiable</p>
-              <p className="text-purple-600 font-semibold">
-                Les Deux Alpes
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-6 w-6 text-orange-600" />
-              </div>
-              <CardTitle className="text-lg">Horaires</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">Saison d'hiver</p>
-              <p className="text-orange-600 font-semibold">
-                9h - 17h
-              </p>
-            </CardContent>
-          </Card>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {contactInfo.map((info, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <div className={`w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-4`}>
+                  <info.icon className={`h-8 w-8 ${info.color}`} />
+                </div>
+                <CardTitle className="text-lg">{info.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="font-semibold text-gray-900 mb-2">{info.content}</p>
+                <p className="text-sm text-gray-600">{info.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card>
-            <CardHeader className="text-center">
-              <CardTitle className="flex items-center justify-center mb-2">
-                <MapPin className="h-5 w-5 mr-2 text-red-500" />
-                Zone d'intervention
-              </CardTitle>
-              <CardDescription>
-                Je donne mes cours principalement dans ces stations
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Les Deux Alpes</h4>
-                  <p className="text-sm text-gray-600">Station principale</p>
-                  <p className="text-sm text-gray-600">Glacier 3600m</p>
-                </div>
-                <div className="p-4 bg-green-50 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Alpe d'Huez</h4>
-                  <p className="text-sm text-gray-600">Sur demande</p>
-                  <p className="text-sm text-gray-600">Domaine de l'Oisans</p>
-                </div>
-                <div className="p-4 bg-purple-50 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">La Grave</h4>
-                  <p className="text-sm text-gray-600">Hors-piste uniquement</p>
-                  <p className="text-sm text-gray-600">Niveau expert</p>
-                </div>
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center mb-6">
+              <div className="bg-blue-600 w-20 h-20 rounded-3xl flex items-center justify-center">
+                <Mountain className="h-10 w-10 text-white" />
               </div>
-            </CardContent>
-          </Card>
+            </div>
+            
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Prêt(e) à dévaler les pistes ?
+            </h3>
+            
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+              Que vous soyez débutant ou skieur confirmé, je vous accompagne dans votre progression 
+              avec passion et professionnalisme. Plus de 10 ans d'expérience à votre service !
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-blue-600">10+</div>
+                <div className="text-gray-700">Années d'expérience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-green-600">200+</div>
+                <div className="text-gray-700">Élèves formés</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-orange-600">100%</div>
+                <div className="text-gray-700">Satisfaction client</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
