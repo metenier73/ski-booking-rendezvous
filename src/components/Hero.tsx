@@ -31,7 +31,7 @@ const Hero = () => {
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
                 Plus de 20 ans d'expérience pour vous accompagner dans votre progression, 
-                du débutant au skieur confirmé. Cours personnalisés a Val d'Isère et Tignes.
+                du débutant au skieur confirmé. Cours personnalisés à Val d'Isère et Tignes.
               </p>
             </div>
 

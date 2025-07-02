@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,42 +21,11 @@ const BookingForm = () => {
     message: ""
   });
 
-  const [sending, setSending] = useState(false);
-  const [success, setSuccess] = useState<string|null>(null);
-  const [error, setError] = useState<string|null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSending(true);
-    setSuccess(null);
-    setError(null);
-    try {
-      const response = await fetch('http://localhost:3001/api/book', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setSuccess('Demande de réservation envoyée ! Je vous recontacterai rapidement.');
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          courseType: "",
-          date: "",
-          time: "",
-          participants: "",
-          level: "",
-          message: ""
-        });
-      } else {
-        setError("Erreur lors de l'envoi de la demande. Veuillez réessayer.");
-      }
-    } catch (err) {
-      setError("Erreur réseau ou serveur. Veuillez réessayer.");
-    } finally {
-      setSending(false);
-    }
+    console.log("Réservation soumise:", formData);
+    // Ici vous pourrez intégrer le système de paiement
+    alert("Demande de réservation envoyée ! Je vous recontacterai rapidement.");
   };
 
   const handleChange = (field: string, value: string) => {
@@ -210,13 +180,9 @@ const BookingForm = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg py-6"
-                  disabled={sending}
                 >
-                  {sending ? "Envoi en cours..." : "Envoyer la demande de réservation"}
+                  Envoyer la demande de réservation
                 </Button>
-
-                {success && <p className="text-green-600 text-center">{success}</p>}
-                {error && <p className="text-red-600 text-center">{error}</p>}
 
                 <p className="text-sm text-gray-500 text-center">
                   * Champs obligatoires. Je vous recontacterai dans les 24h pour confirmer votre réservation.
