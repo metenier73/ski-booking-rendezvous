@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar, Clock, Users, MessageSquare } from "lucide-react";
+import { Calendar, Clock, Users, MessageSquare, AlertCircle, CheckCircle } from "lucide-react";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -23,18 +23,56 @@ const BookingForm = () => {
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState<string|null>(null);
   const [error, setError] = useState<string|null>(null);
+  const [serverStatus, setServerStatus] = useState<'checking' | 'online' | 'offline'>('checking');
+
+  // Vérifier l'état du serveur au chargement
+  useEffect(() => {
+    checkServerStatus();
+  }, []);
+
+  const checkServerStatus = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/health');
+      if (response.ok) {
+        setServerStatus('online');
+        console.log('Serveur backend disponible');
+      } else {
+        setServerStatus('offline');
+      }
+    } catch (err) {
+      console.error('Serveur backend non disponible:', err);
+      setServerStatus('offline');
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Soumission du formulaire avec:', formData);
+    
+    // Vérification des champs obligatoires
+    if (!formData.name || !formData.email || !formData.phone || !formData.courseType) {
+      setError("Veuillez remplir tous les champs obligatoires (nom, email, téléphone, type de cours).");
+      return;
+    }
+
     setSending(true);
     setSuccess(null);
     setError(null);
+    
     try {
+      console.log('Envoi de la demande vers le serveur...');
       const response = await fetch('http://localhost:3001/api/book', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(formData),
       });
+
+      console.log('Réponse du serveur:', response.status);
+      const responseData = await response.json();
+      console.log('Données de réponse:', responseData);
+
       if (response.ok) {
         setSuccess('Demande de réservation envoyée ! Je vous recontacterai rapidement.');
         setFormData({
@@ -49,10 +87,11 @@ const BookingForm = () => {
           message: ""
         });
       } else {
-        setError("Erreur lors de l'envoi de la demande. Veuillez réessayer.");
+        setError(responseData.message || "Erreur lors de l'envoi de la demande. Veuillez réessayer.");
       }
     } catch (err) {
-      setError("Erreur réseau ou serveur. Veuillez réessayer.");
+      console.error("Erreur de connexion:", err);
+      setError("Impossible de contacter le serveur. Vérifiez que le serveur backend est démarré sur le port 3001.");
     } finally {
       setSending(false);
     }
@@ -73,6 +112,28 @@ const BookingForm = () => {
             Remplissez le formulaire ci-dessous pour réserver votre cours de ski. 
             Je vous recontacterai rapidement pour confirmer votre réservation.
           </p>
+          
+          {/* Indicateur d'état du serveur */}
+          <div className="mt-4 flex items-center justify-center space-x-2">
+            {serverStatus === 'checking' && (
+              <div className="flex items-center text-gray-500">
+                <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse mr-2"></div>
+                Vérification du serveur...
+              </div>
+            )}
+            {serverStatus === 'online' && (
+              <div className="flex items-center text-green-600">
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Serveur disponible
+              </div>
+            )}
+            {serverStatus === 'offline' && (
+              <div className="flex items-center text-red-600">
+                <AlertCircle className="w-4 h-4 mr-2" />
+                Serveur non disponible - Démarrez le serveur backend
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="max-w-2xl mx-auto">
@@ -210,13 +271,24 @@ const BookingForm = () => {
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg py-6"
-                  disabled={sending}
+                  disabled={sending || serverStatus === 'offline'}
                 >
                   {sending ? "Envoi en cours..." : "Envoyer la demande de réservation"}
                 </Button>
 
-                {success && <p className="text-green-600 text-center">{success}</p>}
-                {error && <p className="text-red-600 text-center">{error}</p>}
+                {success && (
+                  <div className="flex items-center justify-center space-x-2 text-green-600 bg-green-50 p-4 rounded-lg">
+                    <CheckCircle className="w-5 h-5" />
+                    <p>{success}</p>
+                  </div>
+                )}
+                
+                {error && (
+                  <div className="flex items-center justify-center space-x-2 text-red-600 bg-red-50 p-4 rounded-lg">
+                    <AlertCircle className="w-5 h-5" />
+                    <p>{error}</p>
+                  </div>
+                )}
 
                 <p className="text-sm text-gray-500 text-center">
                   * Champs obligatoires. Je vous recontacterai dans les 24h pour confirmer votre réservation.
