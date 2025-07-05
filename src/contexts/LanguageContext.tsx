@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -100,7 +99,12 @@ const translations = {
     'booking.placeholders.level': 'Quel est votre niveau ?',
     
     // Common
-    'common.required': 'obligatoire'
+    'common.required': 'obligatoire',
+
+    // Booking Form errors
+    'booking.error.required': 'Veuillez remplir tous les champs obligatoires (nom, email, téléphone, type de cours).',
+    'booking.error.default': 'Erreur lors de l\'envoi de la demande. Veuillez réessayer.',
+    'booking.error.connection': 'Impossible de contacter le serveur. Vérifiez que le serveur backend est démarré sur le port 3001.',
   },
   en: {
     // Header
@@ -164,6 +168,11 @@ const translations = {
     'booking.placeholders.level': 'What is your level?',
     
     // Common
-    'common.required': 'required'
+    'common.required': 'required',
+
+    // Booking Form errors
+    'booking.error.required': 'Please fill in all required fields (name, email, phone, course type).',
+    'booking.error.default': 'Error sending the request. Please try again.',
+    'booking.error.connection': 'Unable to contact the server. Check that the backend server is running on port 3001.',
   }
 };
