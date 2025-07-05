@@ -2,8 +2,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Pricing = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -11,41 +14,41 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: "Cours particulier",
+      name: t('pricing.private.name'),
       price: "65",
       duration: "1h",
-      description: "Cours individuel personnalisé",
+      description: t('pricing.private.description'),
       features: [
-        "Attention individuelle",
-        "Progression adaptée",
-        "Horaires flexibles",
-        "Tous niveaux"
+        t('pricing.private.feature1'),
+        t('pricing.private.feature2'),
+        t('pricing.private.feature3'),
+        t('pricing.private.feature4')
       ],
       popular: false
     },
     {
-      name: "Cours collectif",
+      name: t('pricing.group.name'),
       price: "35",
       duration: "1h30",
-      description: "Groupe de 4-6 personnes",
+      description: t('pricing.group.description'),
       features: [
-        "Ambiance conviviale",
-        "Émulation de groupe",
-        "Tarif avantageux",
-        "Niveau homogène"
+        t('pricing.group.feature1'),
+        t('pricing.group.feature2'),
+        t('pricing.group.feature3'),
+        t('pricing.group.feature4')
       ],
       popular: true
     },
     {
-      name: "Stage 5 jours",
+      name: t('pricing.stage.name'),
       price: "280",
       duration: "5 × 1h30",
-      description: "Formule intensive",
+      description: t('pricing.stage.description'),
       features: [
-        "Progression rapide",
-        "Suivi personnalisé",
-        "Groupe restreint",
-        "Meilleur rapport qualité/prix"
+        t('pricing.stage.feature1'),
+        t('pricing.stage.feature2'),
+        t('pricing.stage.feature3'),
+        t('pricing.stage.feature4')
       ],
       popular: false
     }
@@ -56,10 +59,10 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Tarifs des Cours
+            {t('pricing.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des formules adaptées à tous les budgets pour apprendre le ski dans les meilleures conditions
+            {t('pricing.subtitle')}
           </p>
         </div>
 
@@ -70,7 +73,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                     <Star className="h-4 w-4" />
-                    <span>Populaire</span>
+                    <span>{t('pricing.popular')}</span>
                   </div>
                 </div>
               )}
@@ -109,7 +112,7 @@ const Pricing = () => {
                     : 'bg-gray-900 hover:bg-gray-800'
                   }`}
                 >
-                  Réserver
+                  {t('pricing.book')}
                 </Button>
               </CardContent>
             </Card>
@@ -118,10 +121,10 @@ const Pricing = () => {
 
         <div className="text-center mt-12 p-6 bg-blue-50 rounded-2xl">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            Tarifs dégressifs disponibles
+            {t('pricing.discount.title')}
           </h3>
           <p className="text-gray-600">
-            Réductions pour les familles et les groupes. Forfaits semaine disponibles.
+            {t('pricing.discount.description')}
           </p>
         </div>
       </div>
