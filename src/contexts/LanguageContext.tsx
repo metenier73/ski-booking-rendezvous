@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -156,6 +155,27 @@ const translations = {
     'booking.error.required': 'Veuillez remplir tous les champs obligatoires (nom, email, téléphone, type de cours).',
     'booking.error.default': 'Erreur lors de l\'envoi de la demande. Veuillez réessayer.',
     'booking.error.connection': 'Impossible de contacter le serveur. Vérifiez que le serveur backend est démarré sur le port 3001.',
+    
+    // Contact
+    'contact.title': 'Me Contacter',
+    'contact.subtitle': 'N\'hésitez pas à me contacter pour toute question ou pour réserver vos cours de ski. Je suis à votre disposition pour vous accompagner dans votre progression.',
+    'contact.phone.title': 'Téléphone',
+    'contact.phone.content': '07 68 10 61 07',
+    'contact.phone.description': 'Disponible 7j/7 pendant la saison',
+    'contact.email.title': 'Email',
+    'contact.email.content': 'meteniermyriam@yahoo.fr',
+    'contact.email.description': 'Réponse sous 24h garantie',
+    'contact.location.title': 'Lieu',
+    'contact.location.content': 'Val d\'Isère & Tignes',
+    'contact.location.description': 'Station de ski des Alpes',
+    'contact.hours.title': 'Horaires',
+    'contact.hours.content': '9h - 17h',
+    'contact.hours.description': 'Saison d\'hiver : Décembre à Avril',
+    'contact.cta.title': 'Prêt(e) à dévaler les pistes ?',
+    'contact.cta.description': 'Que vous soyez débutant ou confirmé, je vous accompagne dans votre progression avec passion et professionnalisme. Plus de 20 ans d\'expérience à votre service !',
+    'contact.stats.experience': 'Années d\'expérience',
+    'contact.stats.students': 'Élèves formés',
+    'contact.stats.satisfaction': 'Satisfaction client',
   },
   en: {
     // Header
@@ -275,5 +295,26 @@ const translations = {
     'booking.error.required': 'Please fill in all required fields (name, email, phone, course type).',
     'booking.error.default': 'Error sending the request. Please try again.',
     'booking.error.connection': 'Unable to contact the server. Check that the backend server is running on port 3001.',
+    
+    // Contact
+    'contact.title': 'Contact Me',
+    'contact.subtitle': 'Don\'t hesitate to contact me for any questions or to book your ski lessons. I am at your disposal to accompany you in your progression.',
+    'contact.phone.title': 'Phone',
+    'contact.phone.content': '07 68 10 61 07',
+    'contact.phone.description': 'Available 7 days a week during the season',
+    'contact.email.title': 'Email',
+    'contact.email.content': 'meteniermyriam@yahoo.fr',
+    'contact.email.description': 'Response within 24h guaranteed',
+    'contact.location.title': 'Location',
+    'contact.location.content': 'Val d\'Isère & Tignes',
+    'contact.location.description': 'Alpine ski resort',
+    'contact.hours.title': 'Hours',
+    'contact.hours.content': '9am - 5pm',
+    'contact.hours.description': 'Winter season: December to April',
+    'contact.cta.title': 'Ready to hit the slopes?',
+    'contact.cta.description': 'Whether you are a beginner or advanced, I accompany you in your progression with passion and professionalism. Over 20 years of experience at your service!',
+    'contact.stats.experience': 'Years of experience',
+    'contact.stats.students': 'Students trained',
+    'contact.stats.satisfaction': 'Customer satisfaction',
   }
 };

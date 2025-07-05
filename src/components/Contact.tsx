@@ -1,35 +1,38 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock, Mountain } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   const contactInfo = [
     {
       icon: Phone,
-      title: "Téléphone",
-      content: "07 68 10 61 07",
-      description: "Disponible 7j/7 pendant la saison",
+      title: t('contact.phone.title'),
+      content: t('contact.phone.content'),
+      description: t('contact.phone.description'),
       color: "text-blue-600"
     },
     {
       icon: Mail,
-      title: "Email",
-      content: "meteniermyriam@yahoo.fr",
-      description: "Réponse sous 24h garantie",
+      title: t('contact.email.title'),
+      content: t('contact.email.content'),
+      description: t('contact.email.description'),
       color: "text-green-600"
     },
     {
       icon: MapPin,
-      title: "Lieu",
-      content: "Val d'Isère & Tignes",
-      description: "Station de ski des Alpes",
+      title: t('contact.location.title'),
+      content: t('contact.location.content'),
+      description: t('contact.location.description'),
       color: "text-purple-600"
     },
     {
       icon: Clock,
-      title: "Horaires",
-      content: "9h - 17h",
-      description: "Saison d'hiver : Décembre à Avril",
+      title: t('contact.hours.title'),
+      content: t('contact.hours.content'),
+      description: t('contact.hours.description'),
       color: "text-orange-600"
     }
   ];
@@ -39,11 +42,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Me Contacter
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            N'hésitez pas à me contacter pour toute question ou pour réserver vos cours de ski. 
-            Je suis à votre disposition pour vous accompagner dans votre progression.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -73,26 +75,25 @@ const Contact = () => {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Prêt(e) à dévaler les pistes ?
+              {t('contact.cta.title')}
             </h3>
             
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Que vous soyez débutant ou confirmé, je vous accompagne dans votre progression 
-              avec passion et professionnalisme. Plus de 20 ans d'expérience à votre service !
+              {t('contact.cta.description')}
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-3xl font-bold text-blue-600">20+</div>
-                <div className="text-gray-700">Années d'expérience</div>
+                <div className="text-gray-700">{t('contact.stats.experience')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-green-600">7 000+</div>
-                <div className="text-gray-700">Élèves formés</div>
+                <div className="text-gray-700">{t('contact.stats.students')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-orange-600">100%</div>
-                <div className="text-gray-700">Satisfaction client</div>
+                <div className="text-gray-700">{t('contact.stats.satisfaction')}</div>
               </div>
             </div>
           </div>
