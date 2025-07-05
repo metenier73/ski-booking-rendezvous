@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +7,7 @@ import ServerStatus from "./ServerStatus";
 import BookingFormFields from "./BookingFormFields";
 import BookingFormMessages from "./BookingFormMessages";
 
-type ServerStatus = 'checking' | 'online' | 'offline';
+type ServerStatusType = 'checking' | 'online' | 'offline';
 
 const BookingForm = () => {
   const { t } = useLanguage();
@@ -27,7 +26,7 @@ const BookingForm = () => {
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState<string|null>(null);
   const [error, setError] = useState<string|null>(null);
-  const [serverStatus, setServerStatus] = useState<ServerStatus>('checking');
+  const [serverStatus, setServerStatus] = useState<ServerStatusType>('checking');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

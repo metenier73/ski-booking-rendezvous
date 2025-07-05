@@ -1,17 +1,16 @@
-
 import { useEffect, useState } from "react";
 import { CheckCircle, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-type ServerStatus = 'checking' | 'online' | 'offline';
+type ServerStatusType = 'checking' | 'online' | 'offline';
 
 interface ServerStatusProps {
-  onStatusChange: (status: ServerStatus) => void;
+  onStatusChange: (status: ServerStatusType) => void;
 }
 
 const ServerStatus = ({ onStatusChange }: ServerStatusProps) => {
   const { t } = useLanguage();
-  const [serverStatus, setServerStatus] = useState<ServerStatus>('checking');
+  const [serverStatus, setServerStatus] = useState<ServerStatusType>('checking');
 
   useEffect(() => {
     checkServerStatus();
