@@ -1,35 +1,38 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, User, Trophy, Baby } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: User,
-      title: "Cours particuliers",
-      description: "Apprentissage personnalisé selon votre niveau et vos objectifs",
-      features: ["Progression rapide", "Attention individuelle", "Horaires flexibles"],
+      title: t('services.private.title'),
+      description: t('services.private.description'),
+      features: [t('services.private.feature1'), t('services.private.feature2'), t('services.private.feature3')],
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Users,
-      title: "Cours collectifs",
-      description: "Partagez l'expérience avec d'autres passionnés",
-      features: ["Ambiance conviviale", "Tarifs avantageux", "Groupes de 4-6 personnes"],
+      title: t('services.group.title'),
+      description: t('services.group.description'),
+      features: [t('services.group.feature1'), t('services.group.feature2'), t('services.group.feature3')],
       color: "from-green-500 to-green-600"
     },
     {
       icon: Baby,
-      title: "Cours enfants",
-      description: "Initiation ludique au ski pour les 4-12 ans",
-      features: ["Méthode adaptée", "Jeux et activités", "Sécurité prioritaire"],
+      title: t('services.children.title'),
+      description: t('services.children.description'),
+      features: [t('services.children.feature1'), t('services.children.feature2'), t('services.children.feature3')],
       color: "from-orange-500 to-orange-600"
     },
     {
       icon: Trophy,
-      title: "Perfectionnement",
-      description: "Techniques avancées pour skieurs confirmés",
-      features: ["Hors-piste", "Compétition", "Techniques expertes"],
+      title: t('services.advanced.title'),
+      description: t('services.advanced.description'),
+      features: [t('services.advanced.feature1'), t('services.advanced.feature2'), t('services.advanced.feature3')],
       color: "from-purple-500 to-purple-600"
     }
   ];
@@ -39,10 +42,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Mes Services
+            {t('services.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Des cours adaptés à tous les niveaux et tous les âges pour vous faire progresser en toute sécurité
+            {t('services.subtitle')}
           </p>
         </div>
 
