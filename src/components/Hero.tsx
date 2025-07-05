@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Snowflake, Mountain, Award, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -21,17 +24,16 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-blue-600">
                 <Snowflake className="h-8 w-8" />
-                <span className="text-lg font-semibold">Monitrice Française Diplômée</span>
+                <span className="text-lg font-semibold">{t('hero.subtitle')}</span>
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Apprenez le ski avec 
-                <span className="text-blue-600 block">passion</span>
+                {t('hero.title.1')} 
+                <span className="text-blue-600 block">{t('hero.title.2')}</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                Plus de 20 ans d'expérience pour vous accompagner dans votre progression, 
-                du débutant au skieur confirmé. Cours personnalisés à Val d'Isère et Tignes.
+                {t('hero.description')}
               </p>
             </div>
 
@@ -41,7 +43,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('reservation')}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Réserver un cours
+                {t('hero.book.button')}
               </Button>
               <Button 
                 variant="outline" 
@@ -49,7 +51,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('tarifs')}
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-full"
               >
-                Voir les tarifs
+                {t('hero.pricing.button')}
               </Button>
             </div>
 
@@ -59,7 +61,7 @@ const Hero = () => {
                   <Mountain className="h-8 w-8 text-blue-600" />
                 </div>
                 <div className="text-2xl font-bold text-blue-600">20+</div>
-                <div className="text-sm text-gray-600">Années d'expérience</div>
+                <div className="text-sm text-gray-600">{t('hero.experience')}</div>
               </div>
               
               <div className="text-center">
@@ -67,7 +69,7 @@ const Hero = () => {
                   <Award className="h-8 w-8 text-green-600" />
                 </div>
                 <div className="text-2xl font-bold text-green-600">ENSA</div>
-                <div className="text-sm text-gray-600">Diplôme officiel</div>
+                <div className="text-sm text-gray-600">{t('hero.diploma')}</div>
               </div>
               
               <div className="text-center">
@@ -75,7 +77,7 @@ const Hero = () => {
                   <Users className="h-8 w-8 text-orange-600" />
                 </div>
                 <div className="text-2xl font-bold text-orange-600">7 000+</div>
-                <div className="text-sm text-gray-600">Élèves formés</div>
+                <div className="text-sm text-gray-600">{t('hero.students')}</div>
               </div>
             </div>
           </div>
@@ -87,8 +89,8 @@ const Hero = () => {
                   <Snowflake className="h-24 w-24 text-blue-500 mx-auto" />
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-gray-900">Myriam Metenier</h3>
-                    <p className="text-blue-600 font-semibold">Monitrice Indépendante</p>
-                    <p className="text-gray-600">	Val d'Isère & Tignes</p>
+                    <p className="text-blue-600 font-semibold">{t('hero.instructor')}</p>
+                    <p className="text-gray-600">Val d'Isère & Tignes</p>
                   </div>
                 </div>
               </div>

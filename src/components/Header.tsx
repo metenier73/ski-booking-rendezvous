@@ -1,8 +1,12 @@
 
 import { Button } from "@/components/ui/button";
-import { Snowflake, MapPin, Phone, Mail } from "lucide-react";
+import { Snowflake } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -25,34 +29,37 @@ const Header = () => {
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Services
+              {t('nav.services')}
             </button>
             <button 
               onClick={() => scrollToSection('tarifs')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Tarifs
+              {t('nav.pricing')}
             </button>
             <button 
               onClick={() => scrollToSection('reservation')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Réservation
+              {t('nav.booking')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              Contact
+              {t('nav.contact')}
             </button>
           </nav>
 
-          <Button 
-            onClick={() => scrollToSection('reservation')}
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
-          >
-            Réserver
-          </Button>
+          <div className="flex items-center space-x-4">
+            <LanguageSelector />
+            <Button 
+              onClick={() => scrollToSection('reservation')}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+            >
+              {t('button.book')}
+            </Button>
+          </div>
         </div>
       </div>
     </header>
