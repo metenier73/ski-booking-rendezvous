@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
 
-## Project info
+# Site de Réservation de Cours de Ski - Myriam Metenier
 
-**URL**: https://lovable.dev/projects/077a0657-28be-4c31-a245-9bde07d7b8ac
+Site web professionnel pour une monitrice de ski indépendante proposant des cours personnalisés à Val d'Isère et Tignes.
 
-## How can I edit this code?
+## Fonctionnalités
 
-There are several ways of editing your application.
+- 🎿 Présentation des services de cours de ski
+- 💰 Grille tarifaire détaillée
+- 📅 Système de réservation en ligne
+- 🌐 Interface multilingue (Français/Anglais)
+- 📱 Design responsive
+- ✉️ Envoi d'emails automatique pour les réservations
 
-**Use Lovable**
+## Technologies utilisées
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/077a0657-28be-4c31-a245-9bde07d7b8ac) and start prompting.
+- **Frontend** : React, TypeScript, Tailwind CSS, Shadcn/ui
+- **Backend** : Node.js, Express
+- **Email** : Nodemailer (Yahoo Mail)
 
-Changes made via Lovable will be committed automatically to this repo.
+## Installation et configuration
 
-**Use your preferred IDE**
+### 1. Cloner le repository
+```bash
+git clone <url-du-repository>
+cd ski-booking-rendezvous
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 2. Installer les dépendances
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 3. Configuration des variables d'environnement
+Créez un fichier `.env` à la racine du projet avec :
+```env
+PORT=3001
+YAHOO_USER=votre-email@yahoo.fr
+YAHOO_PASS=votre-mot-de-passe-application-yahoo
+```
 
-Follow these steps:
+**Important** : Pour Yahoo Mail, vous devez utiliser un "mot de passe d'application" et non votre mot de passe principal.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 4. Démarrer l'application
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+#### Frontend (développement)
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+#### Backend
+```bash
+node server.js
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+L'application sera accessible sur `http://localhost:5173` et le serveur backend sur `http://localhost:3001`.
 
-**Use GitHub Codespaces**
+## Configuration Yahoo Mail
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Pour utiliser Yahoo Mail avec Nodemailer :
 
-## What technologies are used for this project?
+1. Connectez-vous à votre compte Yahoo
+2. Allez dans "Paramètres de compte" > "Sécurité du compte"
+3. Activez l'authentification à deux facteurs si ce n'est pas fait
+4. Générez un "mot de passe d'application" pour cette application
+5. Utilisez ce mot de passe d'application dans la variable `YAHOO_PASS`
 
-This project is built with:
+## Déploiement
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Variables d'environnement en production
+Assurez-vous de configurer les variables d'environnement suivantes sur votre plateforme de déploiement :
+- `YAHOO_USER`
+- `YAHOO_PASS`
+- `PORT` (optionnel, défaut: 3001)
 
-## How can I deploy this project?
+### GitHub Actions (si applicable)
+Les secrets GitHub doivent être configurés :
+- `YAHOO_USER`
+- `YAHOO_PASS`
 
-Simply open [Lovable](https://lovable.dev/projects/077a0657-28be-4c31-a245-9bde07d7b8ac) and click on Share -> Publish.
+## Structure du projet
 
-## Can I connect a custom domain to my Lovable project?
+```
+├── src/
+│   ├── components/          # Composants React
+│   ├── contexts/           # Contextes React (LanguageContext)
+│   ├── pages/              # Pages de l'application
+│   └── ...
+├── server.js               # Serveur Express
+├── .env.example           # Exemple de configuration
+└── README.md
+```
 
-Yes, you can!
+## Contact
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Pour toute question concernant les cours de ski :
+- **Email** : meteniermyriam@yahoo.fr
+- **Téléphone** : 07 68 10 61 07
+- **Localisation** : Val d'Isère & Tignes
