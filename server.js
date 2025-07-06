@@ -28,7 +28,7 @@ app.post('/api/book', async (req, res) => {
 
   try {
     console.log('Configuration du transporteur email...');
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'yahoo',
       auth: {
         user: process.env.YAHOO_USER,
