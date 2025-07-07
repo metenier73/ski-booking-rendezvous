@@ -4,9 +4,9 @@
 ## 🎯 Présentation du Projet
 
 **Nom du projet :** Site Web Professionnel - Monitrice de Ski ESF  
-**Client :** Sarah Dubois - Monitrice ESF diplômée  
-**Localisation :** Les Deux Alpes  
-**Date de livraison :** Janvier 2025  
+**Client :** Myriam Metenier  - Monitrice ESF diplômée  
+**Localisation :**   Val d'isère
+**Date de livraison :** Juillet 2025  
 
 ## 📊 Résumé Exécutif
 
@@ -70,9 +70,9 @@ Ce projet consiste en la création d'un site web moderne et responsive pour une 
 
 ### 5. Section Contact
 - Informations complètes :
-  - Téléphone : 06 12 34 56 78
-  - Email : contact@skipro.fr
-  - Localisation : Les Deux Alpes
+  - Téléphone : 07 68 10 61 07
+  - Email : meteniermyriam@yahoo.fr
+  - Localisation : Val d'isère
   - Horaires : 9h-17h (saison d'hiver)
 - Design en cards avec icônes
 
@@ -152,8 +152,8 @@ npm run build
 
 ### Variables d'environnement (à configurer) :
 ```env
-VITE_CONTACT_EMAIL=contact@skipro.fr
-VITE_PHONE_NUMBER=0612345678
+VITE_CONTACT_EMAIL=meteniermyriam@yahoo.fr
+VITE_PHONE_NUMBER=0768106107
 ```
 
 ## 📧 Configuration Email
@@ -203,13 +203,13 @@ Pour activer l'envoi d'emails depuis le formulaire de contact :
 
 ## 📞 Contacts & Support
 
-**Développeur :** [Nom du développeur]  
-**Email technique :** [email@technique.com]  
+**Développeur :** Myriam Metenier  
+**Email technique :** meteniermyriam@yahoo.fr  
 **Support :** Disponible pendant 3 mois après livraison  
 
-**Client :** Sarah Dubois  
-**Email :** contact@skipro.fr  
-**Téléphone :** 06 12 34 56 78  
+**Client :** Myriam Metenier
+**Email :** meteniermyriam@yahoo.fr  
+**Téléphone :** 07 68 10 61 07
 
 ---
 
