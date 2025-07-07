@@ -3,14 +3,9 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/ski-booking-rendezvous/',
+  // ...
   build: {
-    outDir: './dist',
+    outDir: 'dist', // ou 'docs' si tu préfères
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
-  },
+  base: '/ski-booking-rendezvous/', // important pour GitHub Pages
 });

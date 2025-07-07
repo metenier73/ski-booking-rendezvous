@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/ski-booking-rendezvous/',
   build: {
-    outDir: 'docs',
+    outDir: './dist',
   },
   resolve: {
     alias: {
