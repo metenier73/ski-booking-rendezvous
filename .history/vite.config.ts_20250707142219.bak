@@ -1,0 +1,10 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import { componentTagger } from "lovable-tagger";
+
+// Remplace "metenier73" et "ski-booking-rendezvous" par ton utilisateur et nom de repo si besoin
+export default defineConfig({
+  plugins: [react()],
+  base: '/ski-booking-rendezvous/', // IMPORTANT pour GitHub Pages
+})
