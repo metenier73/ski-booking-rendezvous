@@ -9,6 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ secrets.HEROKU_API_KEY != '' }}
     
     steps:
       - name: Checkout code
@@ -20,7 +21,7 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          env_file: ".env.example"
+          usedocker: false
         env:
           HD_YAHOO_USER: ${{ secrets.YAHOO_USER }}
           HD_YAHOO_PASS: ${{ secrets.YAHOO_PASS }}
