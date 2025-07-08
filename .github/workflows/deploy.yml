@@ -22,8 +22,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Cleanup lock and modules
-        run: rm -rf node_modules bun.lockb package-lock.json
+      - name: Cleanup node_modules and bun.lockb
+        run: rm -rf node_modules bun.lockb
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,8 +31,8 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (strict, with lockfile)
+        run: npm ci
 
       - name: Build React app
         run: npm run build
