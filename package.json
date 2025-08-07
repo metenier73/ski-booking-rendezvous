@@ -1,7 +1,10 @@
 {
-  "name": "vite_react_shadcn_ts",
-  "private": true,
-  "version": "0.0.0",
+  "homepage": "https://github.com/metenier73/ski-booking-rendezvous",
+
+  "name": "ski-booking-rendezvous",
+  "version": "0.1.0",
+  "private": true, 
+ 
   "type": "module",
   "scripts": {
     "dev": "vite",
