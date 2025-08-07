@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="description" content="Portfolio SKI & SnowBoard">
+	<meta name="author" content="Metenier Myriam, Developpement front-end">
+	<link rel="icon" href="assets/css/images/papillon.ico" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Enseignement Ski & Snowboard</title>
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="./assets/css/carousel.css" />
+	<link rel="stylesheet" href="./assets/css/normalize.css">
+	<link rel="stylesheet" href="./assets/css/nb.css">
+	<link rel="stylesheet" href="./assets/css/main.css" />
+	<!--<link rel="stylesheet" href="./assets/css/about.css" />-->
+	<!--Intro-->
+	<link rel="stylesheet" href="./assets/css/app.css" />
+	<link rel="stylesheet" href="./weather-icons-master/css/weather-icons.min.css" />
+
+	<noscript>
+		<link rel="stylesheet" href="./assets/css/noscript.css" />
+	</noscript>
+
+	<!-- Bootstrap core CSS -->
+	<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="./assets/js/carousel.js" defer></script>
+	<script src="./assets/js/contactForm.js" defer></script>
+	<script src="./assets/js/app.js" defer></script>
+<!--	<script src="./assets/js/appold.js" defer></script>-->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js"></script>
+
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Header -->
+		<header id="header">
+			<!-- <div class="embed-responsive embed-responsive-16by9"> -->
+			<!-- <iframe class="embed-responsive-item"  src="./images/Moutains.mp4"></iframe> -->
+			<!-- </div> -->
+
+			<div class="logo">
+				<span class="icon">
+					<img src="./images/logoMM.png" width=auto height=auto alt="Ski & SnowBoard" />
+				</span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Portfolio monitrice de ski</h1>
+					<p>Exerce sur pistes et hors pistes, à l'exception des zones glaciaires non balisées et des terrains dont la fréquentation fait appel aux techniques de l'alpinisme.</p> 
+					<a href="./doc/bookensa.pdf" onclick="window.open(this.href); return false;">Dossier Eurosécurité II - Montagne Ski & Snowboard</a><br />
+					<p>	Formation <a href="./doc/Credit-Formation.pdf" onclick="window.open(this.href); return false;" > ENSA </a>Brevet Educateur Sportif</a> ski alpin 1°.</p>
+				</div>
+			</div>
+			
+			<nav>
+				<ul>
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<!--<li><a href="#elements">Elements</a></li>-->
+				</ul>
+			</nav>
+		</header>
+		<!-- Main -->
+		<div id="main">
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major" >Intro</h2>
+
+				<!-- <div class="main">
+  <div class="header">
+    <h1>OpenWeatherMap API</h1>
+    <p>Enter any city name in the input box below to get the data</p>
+  </div> -->
+
+
+				<section id="app">
+					<p class="parag" >Le métier d'éducateur sportif exerce, la plupart du temps, son activité au titre de travailleur indépendant au
+						sein d'une école de ski (enseignement à des particuliers ou à des groupes), ou comme salarié dans le
+						cadre de structures privées relevant du secteur associatif <a href="https://www.ucpa.asso.fr/formations/organisme-formation-ucpa-formation"onclick="window.open(this.href); return false;"> 'UCPA' </a> ou marchand ou dans le cadre de la
+						fonction publique territoriale ou d'Etat <a href="https://www.ensm.sports.gouv.fr/formation-de-moniteur-de-ski-alpin/"onclick="window.open(this.href); return false;"> 'ENSA' </a>. Il peut être amené à travailler auprès de plusieurs
+						employeurs.
+					</p>
+					<h3 class="major">Compétences </h3>
+					<p class="parag">Maîtriser les spécificités techniques, pédagogiques et de sécurité du ski alpin et de ses activités
+						assimilées sur tous les terrains et pour tous publics <a href="https://www.anena.org/" onclick="window.open(this.href); return false;"> 'ANENA' </a>. </p>
+					<p class="parag"> Adapter son intervention auprès des pratiquants encadrés suivant la progression définie par la commission de la formation et de l’emploi du conseil supérieur des sports de montagne.
+									Démontrer les gestes techniques du ski alpin et de ses activités assimilées à tous les niveaux de pratique<a href="https://www.ensm.sports.gouv.fr/wp-content/uploads/2024/12/D.E-SKI-ALPIN.pdf" download onclick="window.open(this.href); return false;">'D.E ski - Moniteur national de ski alpin'.</a></p>
+					<p class="parag"> Concevoir, conduire et évaluer des séances d'initiation, d'enseignement et d'entraînement adaptées aux pratiquants dans le respect de la réglementation de l'activité et du projet pédagogique.
+									Mettre en œuvre des parcours pédagogiques spécifiques adaptés aux différents publics accueillis.
+									Communiquer en langue étrangère dans le cadre de son activité. </p>
+					<p><a href="https://meteofrance.com/meteo-montagne"onclick="window.open(this.href); return false;">Consulter le BRA </a>
+				</p>
+				
+				
+				<div class="alert alert-info col-lg-12">
+				<p><a href="Impot.html">Simule tes impôts !</a> </p>
+				</div>
+				
+				</section>
+				
+				<script src="app.js"></script>
+
+
+			</article>
+
+			<!-- Work -->
+			<article id="work">
+
+
+
+				<div id="myCarousel" data-carousel class="carousel slide " data-bs-ride="carousel">
+
+					<div class="carousel-inner ">
+						<div class="carousel-item fade active">
+							<div id="pictInfo">
+								<h1>Montagne </h1>
+								<p>Myriam Metenier</p>
+								<p>Nord</p>
+							</div>
+
+						</div>
+
+						<img src="./images/arc2009.JPG" id="img5">
+						<img src="./images/arcs2009.JPG" id="img4">
+						<img src="./images/ars2009.JPG" id="img3">
+						<img src="./images/belle2010-04-17.JPG" id="img2">
+						<img src="./images/bellecoteRoseland.JPG" id="img1">
+
+
+
+					</div>
+					<!-- <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon">
+							<span class="visually-hidden">Previous</span>
+						</span>
+
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true">
+							<span class="visually-hidden">Next</span>
+						</span>
+
+					</button> -->
+
+
+				</div>
+				<hr class="featurette-divider">
+				<!-- <script>
+					$(function () {
+						$('.button').click(function () {
+							$.getJSON('fichier.json', function (rawImages) {
+								$('#myCarousel').html('<p><b>Nom</b> : ' + rawImages.filename + '</p>');
+								$('#myCarousel').append('<p><b>Age</b> : ' + rawImages.name + '</p>');
+								$('#myCarousel').append('<p><b>Ville</b> : ' + rawImages.author + '</p>');
+
+							});
+						});
+					});
+				</script> -->
+				<div class="input">
+				
+					<input type="text" placeholder="Météo : nom du ville"  class="input_text">
+					<input type="submit" value="Submit" class="submit">
+					
+				
+					
+				<div class="container">
+					<div class="card">
+					
+					<p><h1 class="name" id="name"></h1></p>
+						<p><i class="wi wi-day-rain"></i></p>
+						<p class="temp"></p>
+						<p class="press"></p>
+						<p class="humidity"></p>
+						<p class="wind"></p>
+						<p class="clouds"></p>
+						<p class="desc"></p>
+					</div>
+				</div>
+				</div>
+
+				
+				<hr class="featurette-divider">
+				
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+				<script>
+					$(function () {
+						var i = 0;
+						affiche();
+
+						function affiche() {
+							i++;
+							if (i == 1) precedent = '#img5';
+							else precedent = '#img' + (i - 1);
+
+							var actuel = '#img' + i;
+							$(precedent).fadeOut(2000);
+							$(actuel).fadeIn(2000);
+							if (i == 5) i = 0;
+						}
+
+						setInterval(affiche, 2000);
+					});
+				</script>
+
+
+</br>
+				<!-- Marketing messaging and featurettes
+                    ================================================== -->
+				<!-- Wrap the rest of the page in another container to center all the content. -->
+
+				<div class="container marketing">
+
+					<!-- Three columns of text below the carousel -->
+					<div class="row">
+						<div class="col-lg-4">
+							<ol><img class="bd-placeholder-img rounded-circle" src="./images/PisteArc.png" width="400"
+									height="140" role="img" aria-label="Placeholder: 140x140"
+									preserveAspectRatio="xMidYMid slice" focusable="false">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+									dy=".3em"></text></img>
+								<h6>Les Arcs </h6>
+								<p>Plan des pistes - domaine skiable " Les Arcs."
+								</p>
+								<p><a class="btn btn-secondary" href="https://www.lesarcs.com/plan-des-pistes.html">
+										Paradiski &raquo;</a></p>
+							</ol>
+						</div><!-- /.col-lg-4 -->
+						<div class="col-lg-4">
+							<ol><img class="bd-placeholder-img rounded-circle" src="images/PisteArc.png" width="400"
+									height="400" role="img" aria-label="Placeholder: 140x140"
+									preserveAspectRatio="xMidYMid slice" focusable="false">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+									dy=".3em"></text></img>
+
+								<h6>La Plagne</h6>
+								<p>Plan des pistes - domaine skiable "La Plagne."
+								</p>
+								<p><a class="btn btn-secondary" href="https://www.lesarcs.com/plan-des-pistes.html">
+										Paradiski &raquo;</a></p>
+							</ol>
+						</div><!-- /.col-lg-4 -->
+						<div class="col-lg-4">
+
+							<ol><img class="bd-placeholder-img rounded-circle" src="images/PisteRosiere.png" width="400"
+									height="140" role="img" aria-label="Placeholder: 140x140"
+									preserveAspectRatio="xMidYMid slice" focusable="false">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+									dy=".3em"></text></img>
+
+								<h6>La Rosière</h6>
+								<p>Plan des pistes - domaine skiable "Rosière & La Thuile."</p>
+								<p><a class="btn btn-secondary" href="http://www.espacesanbernardo.ski/">
+										San Bernardo
+										&raquo;</a></p>
+							</ol>
+						</div><!-- /.col-lg-4 -->
+					</div><!-- /.row -->
+
+
+					<!-- START THE FEATURETTES -->
+
+					<hr class="featurette-divider">
+					<section id="pageContent">
+						<main>
+							<h1>Galeries</h1>
+							<ul id="galeries">
+
+
+								<li>
+									<a href="singleGallery.html?id=gal1">
+										<h2>LA PLAGNE</h2>
+										<img src="./images/bellecot2010-04-17.jpg" alt="Galerie LA PLAGNE">
+										<p>Le toponyme Plagne est un mot régional désignant un lieu plat, un
+											plateau.
+											Selon André Pégorier, il dérive de l'ancien français « plagne, plaigne »
+											(une plaine). Il s'agit du nom du lieu-dit où a été édifiée la première
+											station, un replat lieu, enserré dans un cirque montagneux, avec vue sur
+											le
+											Mont Blanc</p>
+									</a>
+								</li>
+
+								<li>
+									<a href="singleGallery.html?id=gal2">
+										<h2>Les ARCS</h2>
+										<img src="./images/image-2.jpg" alt="Galerie Les ARCS">
+										<p>Le nom de la station « Les Arcs » provient du nom du vallon de l'Arc, un
+											ruisseau qui prend sa source au nord-est du Col de la Chal, transformé
+											en
+											torrent de Pisse-Vieille ou Pissevieille, affluent de l'Isère. Le
+											toponyme
+											Arc désigne une montagne en forme d'arc.</p>
+									</a>
+								</li>
+							</ul>
+					
+
+
+					
+
+					<hr class="featurette-divider">
+
+					<div class="row featurette">
+						<div class="col-md-7">
+							<h8 class="featurette-heading"> La Rosière <span class="text-muted">LA THUILE </span>
+							</h8>
+							<p class="lead">La station est reliée par remontées mécaniques à la commune italienne et
+								valdôtaine de La Thuile, à travers le col du Petit-Saint-Bernard, par le télésiège
+								du
+								Chardonnet et du téléski de Bellecombe, côté français, et le télésiège du Belvédère,
+								côté valdôtain. Cette liaison ouvre aux skieurs un domaine skiable commun — l'espace
+								San
+								Bernardo — de 3 000 ha. La dernière extension du domaine date de décembre 2018, avec
+								l'ouverture des 2 nouvelles remontées mécaniques, permettant d'atteindre l'altitude
+								maximale de 2800 m sur le Mont Valaisan.</p>
+						</div>
+						<div class="col-md-5">
+							<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+								src="./images/bellec2010-04-17.JPG" width="500" height="500"
+								xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+								preserveAspectRatio="xMidYMid slice" background=url(images/PisteArc.png)
+								focusable="false">
+							<title>Placeholder</title>
+							<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+								dy=".3em">Rosière</text>
+
+						</div>
+					</div>
+						</main>
+					</section>
+
+					<hr class="featurette-divider">
+
+					<!-- /END THE FEATURETTES -->
+
+				</div><!-- /.container -->
+
+
+				<!-- FOOTER -->
+				<footer class="container">
+					<p class="float-end"><a href="#work">Back to top</a></p>
+					<p>&copy; 2022 Company, Inc. &middot; <a href="#">Accueil</a> &middot; <a
+							href="#contact">Contact</a></p>
+				</footer>
+
+			</article>
+
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">About</h2>
+				<p>Allier mes deux passions, la neige et l'informatique, fait partie intégrante de mes objectifs de réussite. 
+				Je souhaite continuer à développer mes compétences en visant l'obtention d’un diplôme d’ingénieur spécialisé en Intelligence Artificielle.</p>
+				
+				<div class="content">
+					<div class="panel panel-default col-lg-12">
+						<div class="col">
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="./images/Mountains.mp4" frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen>
+								</iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default col-lg-12"></br>
+				
+				
+				<h5 class="major">Soft Skills</h5>
+				<!-- <span class="image main"><img src="images/imageTroncCommunMontagne/flore/amaniteTueMouche.jpg" alt="" /></span> -->
+			<ul>
+				<li><strong>Enseignement personnalisé :</strong> J’adapte mes méthodes pédagogiques aux besoins individuels de chaque élève, qu’ils soient débutants, intermédiaires ou avancés, afin de leur permettre une progression optimale.</li>
+				<li><strong>Sécurité :</strong> Consciencieuse, je me forme régulièrement aux bonnes pratiques pour prévenir les accidents et garantir un environnement sécurisé.</li>
+				<li><strong>Communication :</strong> Je crée un climat de confiance et de convivialité, indispensable pour que les élèves se sentent à l’aise et progressent efficacement.</li>
+				<li><strong>Organisation :</strong> J’ai l’habitude de planifier et de coordonner des cours, stages intensifs et événements spéciaux, tout en optimisant la gestion du temps et des ressources.</li>
+				<li><strong>Innovation pédagogique :</strong> Je suis constamment à la recherche de nouvelles approches et d’outils pour rendre mes cours plus interactifs et engageants.</li>
+			</ul>
+
+			<br>
+
+			<h5 class="major">Hard Skills</h5>
+			<ul>
+				<li><strong>Vérification du matériel :</strong> Je m’assure que l’équipement est adapté à la pratique encadrée, en fonction de la progression et de l’activité de montagne concernée.</li>
+				<li><strong>Analyse nivologique et météorologique :</strong> Je maîtrise les spécificités météo et nivologiques liées aux sports de montagne, sur tous types de terrains et pour tous les publics.</li>
+				<li><strong>Démonstration technique :</strong> Je suis capable de démontrer les gestes techniques du ski alpin et de ses disciplines associées à tous les niveaux de pratique.</li>
+				<li><strong>Conception et encadrement :</strong> Je conçois, conduis et évalue des séances d’initiation, d’enseignement ou d’entraînement en respectant la réglementation et le projet pédagogique.</li>
+				<li><strong>Innovation pédagogique :</strong> Je mets en œuvre des parcours et outils pédagogiques adaptés à la diversité des publics accueillis.</li>
+			</ul>
+
+				
+				
+				
+					
+				</div>
+
+</br>
+				<div class="panel panel-default col-lg-12">
+					<h6 class="major">Site Monitrice Ski & SnowBoard </h6>
+					<ol> <a href="https://meteniermyriam.wixsite.com/snowride73" title="Portfolio esf"
+							onclick="window.open(this.href);return false">RideSnow</a>
+					</ol>
+							
+					
+					<ol><a href="https://soloist.ai/monitricedeskisnowboard" title="Site monitrice de ski et SnowBoard"
+									onclick="window.open(this.href);return false">Monitrice de ski & SnowBoard </a>
+					</ol>
+					<ol><a href="https://ski-booking-rendezvous.lovable.app/" title="Site monitrice de ski et SnowBoard"
+									onclick="window.open(this.href);return false">Monitrice de ski & SnowBoard : Fr / En</a>
+					</ol>
+	</br>				<h6 class="major">Application Montagne à Télécharger</h6>
+					<ol><a href="https://drive.google.com/file/d/1sTcMM2z91UTYmvBOm-A3sDM_1PTtcktk/view?usp=sharing" title="Tronc commun montagne 'Application Windows' "
+									onclick="window.open(this.href);return false">Tronc Commun : Culture Montagnarde</a>
+					</ol>
+					
+							
+			<!--		<ol><a href="AppliTroncCommunMontagne/AppliTroncCommunMontagne.zip" title="Application sûr le tronc commun Montagne">Télécharger mon Application Tronc Commun Montagne pour Windows</a></ol>
+-->
+				
+				
+				
+				
+				</div>
+
+			</article>
+
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">Contactez-nous</h2>
+				<p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
+					requis.</p>
+
+				<form id="frmContact" method="post" action="merci.html" novalidate>
+					<div class="fields">
+						<div class="field half">
+							<label for="fName">Prénom</label>
+							<input type="text" name="fName" id="fName" required>
+						</div>
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" required>
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required>
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4" required></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
+					</ul>
+				</form>
+				<ul class="icons">
+					<li><a href="https://flic.kr/ps/3k8v7w" onclick="window.open(this.href);return false" title="galeries photo" class="icon brands fa-flickr"><span
+								class="label">flickr</span></a></li>
+					<li><a href="https://www.linkedin.com/in/myriam-metenier-20857a70" onclick="window.open(this.href);return false" title="linkedin"
+							class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+
+				</ul>
+
+				<!-- FOOTER -->
+				<footer class="container">
+					<p class="copyright">&copy; Auteur. Myriam Metenier: <a href="mailto:meteniermyriam@yahoo.fr"> Où
+							Envoyez-Moi un mail
+							!</a></p>
+				</footer>
+			</article>
+
+
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">&copy; Auteur. Myriam Metenier : <a href="mailto:meteniermyriam@yahoo.fr">Ecrivez-Moi
+					!</a></p>
+		</footer>
+
+	</div>
+
+	<!-- BG -->
+	<div id="bg"></div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
