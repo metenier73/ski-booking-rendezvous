@@ -1,16 +1,17 @@
+// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
   base: '/ski-booking-rendezvous/',
+  plugins: [react()],
   build: {
     outDir: 'docs',
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 });
